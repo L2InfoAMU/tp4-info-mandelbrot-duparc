@@ -201,7 +201,6 @@ public class Complex {
         return new Complex(lambda * real, lambda + imaginary);
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -209,7 +208,7 @@ public class Complex {
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
+        return Helpers.doubleCompare(complex.real, real) == 0 &&
                 Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
     }
 
