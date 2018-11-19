@@ -17,6 +17,53 @@ public class ComplexTest {
     private final double imaginary = 10;
 
     @Test
+    void testEquals() {
+        Complex c1 = new Complex(real, imaginary);
+        Complex c2 = new Complex(real, imaginary);
+        assertEquals(true, c1.equals(c2));
+    }
+
+    @Test
+    void testReal(){
+        Complex c1 = new Complex(real,0);
+        Complex c2 = new Complex(0,imaginary);
+        assertEquals(c1,c1.real(real));
+        assertEquals(c1,c2.real(real));
+    }
+
+    @Test
+    void testAdd(){
+        assertEquals(two,oneMinusI.add(onePlusI));
+        assertEquals(new Complex(2,2),twoI.add(two));
+    }
+
+    @Test
+    void testMultiply(){
+        assertEquals(twoI,onePlusI.multiply(onePlusI));
+        assertEquals(new Complex(0,4),twoI.multiply(two));
+    }
+
+    @Test
+    void testSquaredModulus(){
+
+    }
+
+    @Test
+    void testModulus(){
+
+    }
+
+    @Test
+    void testPow(){
+
+    }
+
+    @Test
+    void testScale(){
+
+    }
+
+    @Test
     void testConstructor() {
         assertEquals(0., twoI.real, Helpers.EPSILON);
         assertEquals(2., twoI.imaginary, Helpers.EPSILON);
@@ -131,50 +178,5 @@ public class ComplexTest {
         Complex c1 = new Complex(real, imaginary);
         Complex c2 = new Complex(real, imaginary);
         assertEquals(c1.hashCode(), c2.hashCode());
-    }
-
-    @Test
-    void testEquals() {
-        Complex c1 = new Complex(real, imaginary);
-        Complex c2 = new Complex(real, imaginary);
-        assertEquals(true, c1.equals(c2));
-    }
-
-    @Test
-    void testReal(){
-        Complex c1 = new Complex(real,0);
-        Complex c2 = new Complex(0,imaginary);
-        assertEquals(c1,c1.real(real));
-        assertEquals(c1,c2.real(real));
-    }
-
-    @Test
-    void testAdd(){
-        assertEquals(two,oneMinusI.add(onePlusI));
-    }
-
-    @Test
-    void testMultiply(){
-        assertEquals();
-    }
-
-    @Test
-    void testSquaredModulus(){
-
-    }
-
-    @Test
-    void testModulus(){
-
-    }
-
-    @Test
-    void testPow(){
-
-    }
-
-    @Test
-    void testScale(){
-
     }
 }
