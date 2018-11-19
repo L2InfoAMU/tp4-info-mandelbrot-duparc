@@ -69,7 +69,10 @@ public class ComplexTest {
 
     @Test
     void testScale(){
-        assertEquals();
+        assertEquals(new Complex(0,0),onePlusI.scale(0));
+        assertEquals(onePlusI,onePlusI.scale(1));
+        assertEquals(new Complex(2,2),onePlusI.scale(2));
+        assertEquals(new Complex(-2,-2),onePlusI.scale(-2));
     }
 
     @Test
