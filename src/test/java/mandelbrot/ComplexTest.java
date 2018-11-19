@@ -45,22 +45,31 @@ public class ComplexTest {
 
     @Test
     void testSquaredModulus(){
-
+        assertEquals(2,onePlusI.squaredModulus());
+        assertEquals(1,minusI.squaredModulus());
+        assertEquals(1,minusOne.squaredModulus());
+        assertEquals(4,two.squaredModulus());
     }
 
     @Test
     void testModulus(){
-
+        assertEquals(2,twoI.modulus());
+        assertEquals(1,minusI.modulus());
+        assertEquals(1,minusOne.modulus());
+        assertEquals(2,two.modulus());
     }
 
     @Test
     void testPow(){
-
+        assertEquals(new Complex(1,0),onePlusI.pow(0));
+        assertEquals(onePlusI,onePlusI.pow(1));
+        assertEquals(new Complex(0,2),onePlusI.pow(2));
+        assertEquals(new Complex(-2,2),onePlusI.pow(3));
     }
 
     @Test
     void testScale(){
-
+        assertEquals();
     }
 
     @Test
